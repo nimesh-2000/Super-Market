@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerContext" prefHeight="784.0" prefWidth="1629.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+   <children>
+      <Label layoutX="681.0" layoutY="20.0" text="Manage Customer" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="684.0" layoutY="72.0" prefHeight="6.0" prefWidth="337.0" />
+      <JFXTextField fx:id="txtCustomerId" labelFloat="true" layoutX="99.0" layoutY="222.0" promptText="Customer Id">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="776.0" layoutY="222.0" promptText="Customer Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCustomerAddress" labelFloat="true" layoutX="1178.0" layoutY="222.0" promptText="Customer Address">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtCity" labelFloat="true" layoutX="99.0" layoutY="359.0" promptText="City">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSave" layoutX="1100.0" layoutY="359.0" onAction="#btnSaveOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-background-color: #1abc9c;" text="Save">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="1275.0" layoutY="359.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-background-color: #1abc9c;" text="Delete">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="1382.0" layoutY="100.0" onAction="#btnNewCustomerOnAction" prefHeight="65.0" prefWidth="122.0" style="-fx-background-color: #3498db;" text="+New">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="13.0" layoutY="465.0" prefHeight="283.0" prefWidth="1607.0">
+         <columns>
+            <TableColumn fx:id="colCustomerId" prefWidth="196.00003051757812" text="Customer Id" />
+            <TableColumn fx:id="colCustomerTitle" prefWidth="216.0" text="Customer Title" />
+            <TableColumn fx:id="colCustomerName" prefWidth="305.0" text="Customer Name" />
+            <TableColumn fx:id="colCustomerAddress" prefWidth="285.0" text="Customer Address" />
+            <TableColumn fx:id="colCity" prefWidth="212.0" text="City" />
+            <TableColumn fx:id="colProvince" prefWidth="187.0" text="Province" />
+            <TableColumn fx:id="colPostalCode" prefWidth="203.0" text="Postal Code" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtSearchCustomer" layoutX="271.0" layoutY="138.0" onKeyReleased="#txtSearchCustomerOnKeyReleased" prefHeight="43.0" prefWidth="432.0" promptText="Search">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="228.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/search_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtPostalCode" labelFloat="true" layoutX="776.0" layoutY="359.0" promptText="Postal Code">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="cmbCustomerTitle" labelFloat="true" layoutX="434.0" layoutY="222.0" prefHeight="54.0" prefWidth="281.0" promptText="Customer Title" style="-fx-font-size: 25;" />
+      <JFXComboBox fx:id="cmbProvince" labelFloat="true" layoutX="436.0" layoutY="358.0" prefHeight="54.0" prefWidth="281.0" promptText="Province" style="-fx-font-size: 25;" />
+   </children>
+</AnchorPane>

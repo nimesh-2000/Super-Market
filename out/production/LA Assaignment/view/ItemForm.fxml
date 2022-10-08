@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="itemContext" prefHeight="784.0" prefWidth="1629.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ItemFormController">
+   <children>
+      <Label layoutX="681.0" layoutY="20.0" text="Manage Items" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="681.0" layoutY="72.0" prefHeight="8.0" prefWidth="268.0" />
+      <JFXTextField fx:id="txtItemCode" labelFloat="true" layoutX="99.0" layoutY="222.0" promptText="Item Code">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtPackSize" labelFloat="true" layoutX="776.0" layoutY="222.0" promptText="Pack Size">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDescription" labelFloat="true" layoutX="430.0" layoutY="222.0" promptText="Description">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtUnitPrice" labelFloat="true" layoutX="1178.0" layoutY="222.0" promptText="Unit Price">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtQtyOnHand" labelFloat="true" layoutX="99.0" layoutY="359.0" promptText="Qty On Hand">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtDiscount" labelFloat="true" layoutX="430.0" layoutY="359.0" promptText="Discount">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnSave" layoutX="800.0" layoutY="359.0" onAction="#btnSaveOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-background-color: #1abc9c;" text="Save">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnDelete" layoutX="975.0" layoutY="359.0" onAction="#btnDeleteOnAction" prefHeight="54.0" prefWidth="149.0" style="-fx-background-color: #1abc9c;" text="Delete">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="btnNew" layoutX="1382.0" layoutY="100.0" onAction="#btnNewItemOnAction" prefHeight="65.0" prefWidth="122.0" style="-fx-background-color: #3498db;" text="+New">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblItem" layoutX="96.0" layoutY="465.0" prefHeight="283.0" prefWidth="1472.0">
+        <columns>
+          <TableColumn fx:id="colItemCode" prefWidth="212.00003051757812" text="Item Code" />
+          <TableColumn fx:id="colDescription" prefWidth="256.9999694824219" text="Description" />
+            <TableColumn fx:id="colPackSize" prefWidth="247.0" text="Pack Size(kg)" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="285.0" text="Unit Price" />
+            <TableColumn fx:id="colQty" prefWidth="212.0" text="Qty On Hand" />
+            <TableColumn fx:id="colDiscount" prefWidth="260.0" text="Discount" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtSearchItem" layoutX="271.0" layoutY="138.0" onKeyReleased="#txtSearchItemOnKeyReleased" prefHeight="43.0" prefWidth="432.0" promptText="Search">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="45.0" fitWidth="44.0" layoutX="228.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/search_FILL0_wght400_GRAD0_opsz48.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

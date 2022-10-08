@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="adminLoginContext" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminLoginFormController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="800.0" pickOnBounds="true">
+         <image>
+            <Image url="@asserts/photo_2022-05-24_22-47-39.jpg" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="263.0" layoutY="402.0" onAction="#adminLoginOnAction" opacity="0.8" prefHeight="65.0" prefWidth="154.0" style="-fx-background-color: #f1c40f;" text="Login">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="35.0" layoutY="23.0" text="Admin Login" underline="true">
+         <font>
+            <Font size="40.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAdminName" labelFloat="true" layoutX="268.0" layoutY="138.0" prefHeight="54.0" prefWidth="314.0" promptText="Name">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXTextField>
+      <JFXPasswordField fx:id="pwdAdminPassword" layoutX="269.0" layoutY="235.0" prefHeight="54.0" prefWidth="314.0" promptText="Password">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXPasswordField>
+      <ImageView fitHeight="54.0" fitWidth="82.0" layoutX="286.0" layoutY="25.0" onMouseClicked="#adminLoginOnMouseClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/icons8-back-arrow-48.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fitHeight="81.0" fitWidth="105.0" layoutX="573.0" layoutY="505.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@asserts/outline_lock_black_24dp.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

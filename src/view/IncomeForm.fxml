@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="incomeContext" prefHeight="784.0" prefWidth="1629.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.IncomeFormController">
+   <children>
+      <Label layoutX="663.0" layoutY="20.0" text="INCOME">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="653.0" layoutY="75.0" prefWidth="200.0" />
+      <TableView fx:id="tblIncome" layoutX="448.0" layoutY="210.0" prefHeight="547.0" prefWidth="550.0">
+        <columns>
+          <TableColumn prefWidth="284.0" text="Date" />
+          <TableColumn prefWidth="265.0" text="Daily Income" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="manageCustomerOrderContext" prefHeight="784.0" prefWidth="1629.0" style="-fx-background-color: #bdc3c7;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageCustomerOrdersFormController">
+   <children>
+      <Label layoutX="574.0" layoutY="14.0" text="Manage Customer Orders" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Label>
+      <Separator layoutX="578.0" layoutY="66.0" prefHeight="3.0" prefWidth="474.0" />
+      <JFXButton fx:id="btnRemoveOrder" layoutX="1223.0" layoutY="660.0" onAction="#btnRemoveOrderOnAction" prefHeight="54.0" prefWidth="196.0" style="-fx-background-color: #1abc9c;" text="Remove Order">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblOrderDetail" layoutX="286.0" layoutY="405.0" prefHeight="220.0" prefWidth="1223.0">
+         <columns>
+            <TableColumn fx:id="colItemCode" prefWidth="179.0" text="Order Id" />
+            <TableColumn fx:id="colDescription" prefWidth="177.0" text="Item Code" />
+            <TableColumn fx:id="colQty" prefWidth="156.0" text="Qty" />
+            <TableColumn fx:id="colUnitPrice" prefWidth="181.0" text="Unit Price" />
+            <TableColumn fx:id="colDiscount" prefWidth="173.0" text="Discount" />
+            <TableColumn fx:id="colTotal" prefWidth="186.0" text="Total" />
+            <TableColumn fx:id="colDelete" prefWidth="168.0" text="Delete" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtOrderSearch" layoutX="142.0" layoutY="270.0" onKeyReleased="#searchOrderOnKeyReleased" prefHeight="45.0" prefWidth="305.0" promptText="Search">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="btnConfirmEdit" layoutX="1445.0" layoutY="660.0" onAction="#btnConfirmEditOnAction" prefHeight="54.0" prefWidth="179.0" style="-fx-background-color: #1abc9c;" text="Confirm Edit">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="34.0" layoutY="274.0" text="Orders :-">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="620.0" layoutY="275.0" text="Order Details :-">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtOrderDetailSearch" layoutX="806.0" layoutY="271.0" onKeyReleased="#searchOrderDetailOnKeyReleased" prefHeight="45.0" prefWidth="305.0" promptText="Search">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblOrder" layoutX="42.0" layoutY="405.0" prefHeight="220.0" prefWidth="240.0">
+        <columns>
+          <TableColumn prefWidth="112.99996948242188" text="Order Id" />
+          <TableColumn prefWidth="126.0" text="Customer Id" />
+        </columns>
+      </TableView>
+      <Label layoutX="42.0" layoutY="723.0" text="Total :-">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblTotal" layoutX="135.0" layoutY="724.0" prefHeight="36.0" prefWidth="186.0" text="0.00" textFill="#8a3b3b">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
